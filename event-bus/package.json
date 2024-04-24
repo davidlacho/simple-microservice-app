@@ -1,0 +1,20 @@
+{
+  "name": "event-bus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "expess": "^0.0.1-security",
+    "express": "^4.19.2",
+    "nodemon": "^2.0.22"
+  }
+}
