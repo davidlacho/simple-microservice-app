@@ -1,16 +1,24 @@
-const commentStatuses = {
-  approved: (comment) => <li key={comment.id}>{comment.content}</li>,
-  rejected: (comment) => <li key={comment.id}>This comment has been rejected</li>,
-  pending: (comment) => <li key={comment.id}>This comment is awaiting moderation</li>,
-};
+import React from "react";
 
 const CommentList = ({ comments }) => {
   const renderedComments = comments.map((comment) => {
-    const renderComment = commentStatuses[comment.status] || commentStatuses.pending;
-    return renderComment(comment);
+    let content;
+
+    if (comment.status === "approved") {
+      content = comment.content;
+    }
+
+    if (comment.status === "pending") {
+      content = "This comment is awaiting moderation";
+    }
+
+    if (comment.status === "rejected") {
+      content = "This comment has been rejected";
+    }
+
+    return <li key={comment.id}>{content}</li>;
   });
 
   return <ul>{renderedComments}</ul>;
 };
-
 export default CommentList;
