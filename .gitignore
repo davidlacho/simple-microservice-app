@@ -64,3 +64,7 @@ dist
 
 # Mac files
 .DS_Store
+
+# Skaffold
+
+.skaffold
