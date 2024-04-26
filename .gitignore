@@ -68,3 +68,4 @@ dist
 # Skaffold
 
 .skaffold
+infra/k8s/skaffold
